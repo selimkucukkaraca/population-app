@@ -1,0 +1,14 @@
+type Query{
+    getAllPopulations(page : Int, size : Int) : [PopulationDto]
+    getCountry(country : String!) : PopulationDto
+    getByPopulationPopulationNumber(min : Int, max : Int) : [PopulationDto]
+}
+
+type PopulationDto{
+    continentCode: String,
+    country: String,
+    countryCode: String,
+    population: Int,
+    populationGrowth: Float
+}
+
